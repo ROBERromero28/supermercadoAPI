@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registrar Producto</title>
+</head>
+<body>
+<h1>Registrar Producto</h1>
+<form action="" method="post" id="myForm">
+    <label  for="nombre">nombre</label>
+    <input type="text" name="nombre" id="nombre" required> <br>
+    <label  for="precio">precio</label>
+    <input type="text" name="precio" id="precio" required><br>
+    <label  for="marca">marca</label>
+    <input type="text" name="marca" id="marca" required><br>
+    <label  for="peso">peso</label>
+    <input type="text" name="peso" id="peso" required><br>
+    <button type="button" onclick="sendData('api/products')">Registrar</button>
+</form>
+<script src="js/local.js"></script>
+</body>
+</html>

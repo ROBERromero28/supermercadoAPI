@@ -31,7 +31,7 @@ public class ProductoController {
     }
 
 
-    @RequestMapping(value="api/users/{id}",method = RequestMethod.PUT)
+    @RequestMapping(value="api/products/{id}",method = RequestMethod.PUT)
     public ResponseEntity<Optional> editProduct(@RequestBody Producto newProduct , @PathVariable Long id){
         Map<String, String> response = new HashMap<>();
         try{
