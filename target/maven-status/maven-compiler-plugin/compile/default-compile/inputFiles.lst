@@ -1,5 +1,11 @@
-C:\Users\Ro&Dr\Documents\Rober\Arquitectura Empresarial\pacientes\supermercadoAPI\src\main\java\com\supermercado\repository\ProductoRepository.java
-C:\Users\Ro&Dr\Documents\Rober\Arquitectura Empresarial\pacientes\supermercadoAPI\src\main\java\com\supermercado\controller\ProductoController.java
-C:\Users\Ro&Dr\Documents\Rober\Arquitectura Empresarial\pacientes\supermercadoAPI\src\main\java\com\supermercado\entity\Producto.java
-C:\Users\Ro&Dr\Documents\Rober\Arquitectura Empresarial\pacientes\supermercadoAPI\src\main\java\com\supermercado\util\Message.java
-C:\Users\Ro&Dr\Documents\Rober\Arquitectura Empresarial\pacientes\supermercadoAPI\src\main\java\com\supermercado\ProductoApplication.java
+C:\Users\Ro&Dr\Documents\Rober\supermercadoAPI\src\main\java\com\supermercado\util\JWTUtil.java
+C:\Users\Ro&Dr\Documents\Rober\supermercadoAPI\src\main\java\com\supermercado\ProductoApplication.java
+C:\Users\Ro&Dr\Documents\Rober\supermercadoAPI\src\main\java\com\supermercado\repository\ProductoRepository.java
+C:\Users\Ro&Dr\Documents\Rober\supermercadoAPI\src\main\java\com\supermercado\util\Message.java
+C:\Users\Ro&Dr\Documents\Rober\supermercadoAPI\src\main\java\com\supermercado\config\WebSecurityConfig.java
+C:\Users\Ro&Dr\Documents\Rober\supermercadoAPI\src\main\java\com\supermercado\repository\UserRepository.java
+C:\Users\Ro&Dr\Documents\Rober\supermercadoAPI\src\main\java\com\supermercado\controller\AuthController.java
+C:\Users\Ro&Dr\Documents\Rober\supermercadoAPI\src\main\java\com\supermercado\controller\ProductoController.java
+C:\Users\Ro&Dr\Documents\Rober\supermercadoAPI\src\main\java\com\supermercado\entity\User.java
+C:\Users\Ro&Dr\Documents\Rober\supermercadoAPI\src\main\java\com\supermercado\controller\UserController.java
+C:\Users\Ro&Dr\Documents\Rober\supermercadoAPI\src\main\java\com\supermercado\entity\Producto.java

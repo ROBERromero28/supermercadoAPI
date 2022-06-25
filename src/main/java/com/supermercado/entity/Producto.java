@@ -1,5 +1,4 @@
 package com.supermercado.entity;
-
 import lombok.Data;
 
 import javax.persistence.*;
@@ -20,8 +19,12 @@ public class Producto {
     @Column(name="marca", nullable = false,length = 100)
     private String marca;
 
+    @Column(name="disponible", nullable = false,length = 100)
+    private String disponible;
+
     @Column(name="peso", nullable = false,length = 100)
     private String peso;
 
-
+    @Column(name="usuario", nullable = false,length = 100)
+    private String usuario;
 }

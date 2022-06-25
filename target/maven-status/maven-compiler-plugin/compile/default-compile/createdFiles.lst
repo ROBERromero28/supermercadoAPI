@@ -1,0 +1,11 @@
+com\supermercado\repository\ProductoRepository.class
+com\supermercado\controller\AuthController.class
+com\supermercado\controller\UserController.class
+com\supermercado\controller\ProductoController.class
+com\supermercado\entity\User.class
+com\supermercado\repository\UserRepository.class
+com\supermercado\util\JWTUtil.class
+com\supermercado\ProductoApplication.class
+com\supermercado\config\WebSecurityConfig.class
+com\supermercado\util\Message.class
+com\supermercado\entity\Producto.class

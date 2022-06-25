@@ -2,11 +2,12 @@ package com.supermercado.controller;
 
 import com.supermercado.entity.Producto;
 import com.supermercado.repository.ProductoRepository;
+import com.supermercado.util.JWTUtil;
+import com.supermercado.util.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.supermercado.util.Message;
 
 import java.util.*;
 
@@ -15,9 +16,16 @@ public class ProductoController {
     @Autowired
     private ProductoRepository productoRepository;
     private Message message = new Message();
+    @Autowired
+    private JWTUtil jwtUtil;
+    private boolean validarToken(String token){
+        String id = jwtUtil.getKey(token);
+        return id !=null;
+    }
     @RequestMapping(value="api/products/{id}", method = RequestMethod.GET)
 
-    public ResponseEntity<Producto> GetProduct(@PathVariable Long id){
+    public ResponseEntity<Producto> GetProduct(@PathVariable Long id, @RequestHeader(value = "Authorization") String token){
+        if(!validarToken(token)){return null;}
         Optional<Producto> foundProduct=productoRepository.findById(id);
 
         if(foundProduct.isPresent()){
@@ -32,7 +40,8 @@ public class ProductoController {
 
 
     @RequestMapping(value="api/products/{id}",method = RequestMethod.PUT)
-    public ResponseEntity<Optional> editProduct(@RequestBody Producto newProduct , @PathVariable Long id){
+    public ResponseEntity<Optional> editProduct(@RequestBody Producto newProduct , @PathVariable Long id, @RequestHeader(value = "Authorization") String token){
+        if(!validarToken(token)){return null;}
         Map<String, String> response = new HashMap<>();
         try{
             Producto producto = productoRepository.findById(id).get();
@@ -40,6 +49,7 @@ public class ProductoController {
             producto.setPrecio(newProduct.getPrecio());
             producto.setMarca(newProduct.getMarca());
             producto.setPeso(newProduct.getPeso());
+            producto.setDisponible(newProduct.getDisponible());
             response.put("Success","Product edit");
             response.put("message","Product edit success");
             response.put("status",HttpStatus.OK.toString());
@@ -55,8 +65,8 @@ public class ProductoController {
 
 
     @RequestMapping(value="api/products",method=RequestMethod.GET)
-    public List<Producto> listProduct(){
-
+    public List<Producto> listProduct(@RequestHeader(value = "Authorization") String token){
+        if(!validarToken(token)){return null;}
         return productoRepository.findAll();
     }
 
@@ -77,7 +87,8 @@ public class ProductoController {
 
 
     @RequestMapping(value="api/products/{id}",method=RequestMethod.DELETE)
-    public ResponseEntity<Optional> deleteProduct(@PathVariable Long id){
+    public ResponseEntity<Optional> deleteProduct(@PathVariable Long id,@RequestHeader(value = "Authorization") String token){
+        if(!validarToken(token)){return null;}
         Map<String, String> response = new HashMap<>();
         try{
             Producto producto=productoRepository.findById(id).get();
